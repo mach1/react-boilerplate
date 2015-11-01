@@ -1,0 +1,25 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for react app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mach1/react-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "babel",
+    "boilerplate"
+  ],
+  "author": "Jaan Lambert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mach1/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mach1/react-boilerplate#readme"
+}
