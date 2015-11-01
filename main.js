@@ -2,9 +2,11 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
 
+import SignIn from './sign-in.js'
+
 var App = React.createClass({
   render() {
-    return <h1>Hello</h1>
+    return <SignIn></SignIn>
   }
 })
 

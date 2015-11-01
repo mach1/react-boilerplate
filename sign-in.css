@@ -1,0 +1,21 @@
+body {
+  padding-top: 40px;
+}
+
+.signin-form {
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+input.username {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: -1px;
+}
+
+
+input.password{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-bottom: 20px;
+}
