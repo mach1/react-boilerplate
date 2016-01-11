@@ -6,7 +6,7 @@ import SignIn from './sign-in.js'
 
 var App = React.createClass({
   render() {
-    return <SignIn></SignIn>
+    return <SignIn/>
   }
 })
 
