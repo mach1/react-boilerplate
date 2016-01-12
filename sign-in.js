@@ -2,7 +2,7 @@ import React from 'react';
 import bootstrap from 'bootstrap-webpack';
 import styles from './sign-in.css';
 
-export default React.createClass({
+export default class SignIn extends React.Component {
   render() {
     return (
       <form className="signin-form">
@@ -13,4 +13,4 @@ export default React.createClass({
       </form>
     );
   }
-})
+}

@@ -1,19 +1,18 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
+import { Provider } from 'react-redux';
+import { syncHistory, routeReducer } from 'react-simple-router';
+import configureStore from './store/configureStore.js';
+import App from './app.js';
 
-import SignIn from './sign-in.js'
-
-var App = React.createClass({
-  render() {
-    return <SignIn/>
-  }
-})
+const store = configureStore();
 
 render((
-  <Router>
-    <Route path="/" component={App}>
- 
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <Route path="/" component={App}>
+      </Route>
+    </Router>
+  </Provider>
 ), document.getElementById('container'))

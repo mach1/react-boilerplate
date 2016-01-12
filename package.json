@@ -41,9 +41,14 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.5",
+    "history": "^1.17.0",
     "jquery": "^2.1.4",
     "react": "^0.14.1",
     "react-dom": "^0.14.1",
-    "react-router": "^1.0.0-rc3"
+    "react-redux": "^4.0.6",
+    "react-router": "^1.0.0-rc3",
+    "react-simple-router": "^0.1.6",
+    "redux": "^3.0.5",
+    "redux-simple-router": "^1.0.2"
   }
 }
