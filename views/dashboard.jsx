@@ -1,13 +1,15 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as LoginActions from './actions/login';
-import SignIn from './sign-in.js';
+import * as LoginActions from '../actions/login';
 
-class App extends React.Component {
+class Dashboard extends React.Component {
   render() {
     const { login, actions } = this.props;
-    return <SignIn/>
+
+    return (
+      <div>Dashboard</div>
+    );
   }
 }
 
@@ -23,7 +25,9 @@ function mapStateToProps(state) {
   }
 }
 
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App);
+)(Dashboard);
+
