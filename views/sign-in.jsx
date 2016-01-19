@@ -4,9 +4,11 @@ import styles from './sign-in.css';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as LoginActions from '../actions/login';
+import { routeActions } from 'redux-simple-router';
 
 class SignIn extends React.Component {
   render() {
+    console.log(routeActions)
     const { login, actions } = this.props;
 
     return (
@@ -22,7 +24,7 @@ class SignIn extends React.Component {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(LoginActions, dispatch)
+    actions: bindActionCreators(LoginActions, dispatch),
   }
 }
 
