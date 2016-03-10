@@ -1,21 +1,30 @@
-body {
-  padding-top: 40px;
+.container {
+  margin: 0 auto;
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #fafafa;
+  height: 400px;
 }
 
-.signin-form {
-  max-width: 330px;
+.heading {
+  margin-bottom: 20px;
+}
+
+.input {
+  display: block;
   margin: 0 auto;
 }
 
-input.username {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-bottom: -1px;
+.button {
+  margin: 20px auto 0;
+  width: 256px;
+  outline: none;
 }
 
-
-input.password{
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  margin-bottom: 20px;
+/* ugly hack for not getting inputs with yellow background */
+input:-webkit-autofill {
+  -webkit-box-shadow:0 0 0 50px #fafafa inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #333;
 }

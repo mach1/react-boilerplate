@@ -5,6 +5,10 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as LoginActions from '../actions/login'
 import { routeActions } from 'redux-simple-router'
+import {
+  TextField,
+  RaisedButton
+} from 'material-ui'
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -14,8 +18,8 @@ class SignIn extends React.Component {
 
   doLogin() {
     const details = {
-      username: this.refs.username.value,
-      password: this.refs.password.value
+      username: this.refs.username.getValue(),
+      password: this.refs.password.getValue()
     }
     this.props.actions.login.doLogin(details)
   }
@@ -24,12 +28,32 @@ class SignIn extends React.Component {
     const { login, actions } = this.props;
 
     return (
-      <form className="signin-form">
-	<h2>Please sign in</h2>
-	<input type="text" ref="username" className="form-control username" placeholder="Email address"/>
-	<input type="password" ref="password" className="form-control password" placeholder="Password"/>
-	<button className="btn btn-lg btn-primary btn-block" type="submit" onClick={this.doLogin}>Sign in</button>
-      </form>
+      <div className={styles.container}>
+        <h2 className={styles.heading}>Please sign in</h2>
+        <TextField
+          ref="username"
+          id="email"
+          className={styles.input}
+          floatingLabelText="Email address"
+        />
+        <TextField
+          id="password"
+          ref="password"
+          className={styles.input}
+          floatingLabelText="Password"
+          type="password"
+        />
+        <div
+          className={styles.button}
+        >
+          <RaisedButton
+            onMouseUp={this.doLogin}
+            primary={true}
+            label="Login"
+            fullWidth={true}
+          />
+        </div>
+      </div>
     );
   }
 }
