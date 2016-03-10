@@ -1,7 +1,7 @@
-import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import * as LoginActions from '../actions/login';
+import React from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import * as LoginActions from '../actions/login'
 
 class Dashboard extends React.Component {
   render() {
