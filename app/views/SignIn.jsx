@@ -1,6 +1,6 @@
 import React from 'react'
 import bootstrap from 'bootstrap-webpack'
-import styles from './sign-in.css'
+import styles from './SignIn.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as LoginActions from '../actions/login'
