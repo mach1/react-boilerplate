@@ -17,6 +17,10 @@ export default function login(state = initialState, action) {
       return state.merge({
         loading: true
       })
+    case types.LOGOUT:
+      return state.merge({
+        login: false
+      })
     default:
       return state
   }

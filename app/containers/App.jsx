@@ -5,7 +5,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        My app
         {this.props.children}
       </div>
     );

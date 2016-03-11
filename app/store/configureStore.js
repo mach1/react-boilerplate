@@ -8,14 +8,14 @@ import createLogger from 'redux-logger'
 import { routerReducer, routerMiddleware } from 'react-router-redux'
 
 import rootReducer from '../reducers'
-import { mySaga } from '../sagas/sagas.js'
+import rootSaga from '../sagas/sagas.js'
 
 export default function configureStore(initialState, history) {
   const store = createStore(
     rootReducer,
     applyMiddleware(
       createLogger(),
-      createSagaMiddleware(mySaga),
+      createSagaMiddleware(rootSaga),
       routerMiddleware(history)
     )
   )
