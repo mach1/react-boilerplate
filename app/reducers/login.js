@@ -6,7 +6,7 @@ const initialState = {
 
 export default function login(state = initialState, action) {
   switch (action.type) {
-    case types.DO_LOGIN:
+    case types.LOGIN_SUCCEEDED:
       return {
         login: true
       }

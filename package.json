@@ -40,6 +40,8 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.7.2",
+    "bluebird": "^3.3.4",
     "bootstrap": "^3.3.5",
     "history": "^1.17.0",
     "jquery": "^2.1.4",
@@ -51,6 +53,8 @@
     "react-router": "^1.0.3",
     "react-router-redux": "^4.0.0",
     "react-tap-event-plugin": "^0.2.2",
-    "redux": "^3.0.5"
+    "redux": "^3.0.5",
+    "redux-logger": "^2.6.1",
+    "redux-saga": "^0.9.4"
   }
 }
