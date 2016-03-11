@@ -1,8 +1,32 @@
-import { createStore } from 'redux'
-import rootReducer from '../reducers'
+import {
+  createStore,
+  combineReducers,
+  applyMiddleware
+} from 'redux'
+import createSagaMiddleware from 'redux-saga'
+import createLogger from 'redux-logger'
+import { routerReducer, routerMiddleware } from 'react-router-redux'
 
-export default function configureStore(initialState) {
-  const store = createStore(rootReducer, initialState)
+import rootReducer from '../reducers'
+import { mySaga } from '../sagas/sagas.js'
+
+export default function configureStore(initialState, history) {
+  const store = createStore(
+    rootReducer,
+    applyMiddleware(
+      createLogger(),
+      createSagaMiddleware(mySaga),
+      routerMiddleware(history)
+    )
+  )
+
+  if (module.hot) {
+    // Enable Webpack hot module replacement for reducers
+    module.hot.accept('../reducers', () => {
+      const nextRootReducer = require('../reducers').default
+      store.replaceReducer(nextRootReducer)
+    })
+  }
 
   return store
 }
