@@ -25,6 +25,7 @@ class SignIn extends React.Component {
 
   render() {
     const { login, actions } = this.props;
+    const loading = login.loading
 
     return (
       <div className={styles.container}>
@@ -50,6 +51,7 @@ class SignIn extends React.Component {
             primary={true}
             label="Login"
             fullWidth={true}
+            disabled={loading}
           />
         </div>
       </div>

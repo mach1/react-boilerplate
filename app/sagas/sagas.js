@@ -6,6 +6,7 @@ import { push } from 'react-router-redux'
 
 function* doLogin(action) {
   try {
+    yield put({ type: types.LOGIN_IN_PROGRESS })
     const user = yield call(login, action.details)
     yield put({ type: types.LOGIN_SUCCEEDED, user: action.details })
     yield put(push('/dashboard'))
