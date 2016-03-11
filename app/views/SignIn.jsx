@@ -25,7 +25,7 @@ class SignIn extends React.Component {
 
   render() {
     const { login, actions } = this.props;
-    const loading = login.loading
+    const loading = login.get('loading')
 
     return (
       <div className={styles.container}>

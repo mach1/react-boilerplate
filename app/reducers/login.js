@@ -1,23 +1,22 @@
 import * as types from '../constants/ActionTypes'
+import { Map } from 'immutable'
 
-const initialState = {
+const initialState = Map({
   login: false,
   loading: false
-}
+})
 
 export default function login(state = initialState, action) {
   switch (action.type) {
     case types.LOGIN_SUCCEEDED:
-      return {
-        ...state,
+      return state.merge({
         login: true,
         loading: false
-      }
+      })
     case types.LOGIN_IN_PROGRESS:
-      return {
-        ...state,
+      return state.merge({
         loading: true
-      }
+      })
     default:
       return state
   }
