@@ -4,7 +4,6 @@ import styles from './SignIn.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as LoginActions from '../actions/login'
-import { routeActions } from 'redux-simple-router'
 import {
   TextField,
   RaisedButton
