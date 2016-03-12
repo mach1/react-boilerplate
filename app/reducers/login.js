@@ -6,7 +6,7 @@ const initialState = Map({
   loading: false
 })
 
-export default function login(state = initialState, action) {
+export default function login (state = initialState, action) {
   switch (action.type) {
     case types.LOGIN_SUCCEEDED:
       return state.merge({

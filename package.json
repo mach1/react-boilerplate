@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "babel-node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "repository": {
     "type": "git",
@@ -57,6 +57,7 @@
     "react-tap-event-plugin": "^0.2.2",
     "redux": "^3.0.5",
     "redux-logger": "^2.6.1",
-    "redux-saga": "^0.9.4"
+    "redux-saga": "^0.9.4",
+    "standard": "^6.0.8"
   }
 }

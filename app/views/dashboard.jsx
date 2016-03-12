@@ -7,39 +7,33 @@ import {
   FlatButton
 } from 'material-ui'
 
-import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert';
-import NavigationClose from 'material-ui/lib/svg-icons/navigation/close';
-
 class Dashboard extends React.Component {
-  render() {
-    const { login, actions } = this.props;
-    const logout = this.logout
+  render () {
+    const { actions } = this.props
     return (
       <AppBar
-        title="My App"
+        title='My App'
         zDepth={5}
         showMenuIconButton={false}
-        iconElementRight={<FlatButton label="Sign out" onMouseUp={actions.logout}/>}
+        iconElementRight={<FlatButton label='Sign out' onMouseUp={actions.logout}/>}
       />
-    );
+    )
   }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps (dispatch) {
   return {
     actions: bindActionCreators(LoginActions, dispatch)
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return {
     login: state.login
   }
 }
 
-
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Dashboard);
-
+)(Dashboard)
